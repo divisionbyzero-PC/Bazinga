@@ -26,7 +26,7 @@
    <string>GAME</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="images.qrc">
+   <iconset>
     <normaloff>:/pics/lizard.ico</normaloff>:/pics/lizard.ico</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -576,9 +576,9 @@ color: rgb(0, 0, 0);</string>
       <property name="geometry">
        <rect>
         <x>380</x>
-        <y>107</y>
+        <y>166</y>
         <width>361</width>
-        <height>131</height>
+        <height>101</height>
        </rect>
       </property>
       <property name="font">
@@ -590,41 +590,192 @@ color: rgb(0, 0, 0);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">color: rgb(255, 255, 127);
-background-color: rgb(91,91,91);
+background-color: rgb(91, 91, 91);
 </string>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <set>Qt::AlignHCenter|Qt::AlignTop</set>
       </property>
      </widget>
      <widget class="QLabel" name="phrase_label">
       <property name="geometry">
        <rect>
         <x>379</x>
-        <y>30</y>
+        <y>102</y>
         <width>361</width>
         <height>61</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>18</pointsize>
+        <pointsize>17</pointsize>
         <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">color: rgb(0, 170, 127);</string>
+       <string notr="true">color: rgb(0, 170, 127);
+background-color: rgb(91, 91, 91);</string>
       </property>
       <property name="text">
        <string/>
       </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_3">
+      <property name="geometry">
+       <rect>
+        <x>409</x>
+        <y>10</y>
+        <width>321</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius:10px;
+background-color: rgb(80, 80, 80);
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="score_user">
+       <property name="geometry">
+        <rect>
+         <x>17</x>
+         <y>22</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>30</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0,0,0);
+border:4px solid rgb(30,30,30);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="score_pc">
+       <property name="geometry">
+        <rect>
+         <x>174</x>
+         <y>20</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>30</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0, 0, 0);
+border:4px solid rgb(30,30,30);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_12">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>0</y>
+         <width>261</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>SCORE BOARD</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_13">
+       <property name="geometry">
+        <rect>
+         <x>32</x>
+         <y>74</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>YOU</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignHCenter|Qt::AlignTop</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_14">
+       <property name="geometry">
+        <rect>
+         <x>191</x>
+         <y>72</y>
+         <width>101</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>COMPUTER</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignHCenter|Qt::AlignTop</set>
+       </property>
+      </widget>
      </widget>
      <zorder>label_7</zorder>
      <zorder>user_pic</zorder>
@@ -633,6 +784,7 @@ background-color: rgb(91,91,91);
      <zorder>label_9</zorder>
      <zorder>result_label</zorder>
      <zorder>phrase_label</zorder>
+     <zorder>frame_3</zorder>
     </widget>
     <widget class="QLabel" name="label_6">
      <property name="geometry">

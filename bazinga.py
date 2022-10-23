@@ -14,6 +14,9 @@ import sys
 from playsound import playsound
 
 options = ['ROCK', 'SCISSORS', 'PAPER', 'LIZARD', 'SPOCK']
+      
+pc_points = user_points = 0
+
 
 class Ui(QtWidgets.QMainWindow):
     def __init__(self):
@@ -55,6 +58,8 @@ class Ui(QtWidgets.QMainWindow):
 
     def gameplay(self):
 
+        global pc_points
+        global user_points  
         global phrase
         global result
         phrase = result = 0
@@ -68,6 +73,7 @@ class Ui(QtWidgets.QMainWindow):
 
         if computer_choice == 'ROCK' and self.user_choice in ['LIZARD', 'SCISSORS']:
             result = 'I WON !!'
+            pc_points += 1
             match self.user_choice:
                 case 'LIZARD':
                     phrase = 'ROCK CRUSHES LIZARD !'
@@ -76,6 +82,7 @@ class Ui(QtWidgets.QMainWindow):
 
         elif computer_choice == 'SCISSORS' and self.user_choice in ['PAPER', 'LIZARD']:
             result = 'I WON !!'
+            pc_points += 1
             match self.user_choice:
                 case 'PAPER':
                     phrase = 'SCISSORS CUTS PAPER !'
@@ -84,6 +91,7 @@ class Ui(QtWidgets.QMainWindow):
 
         elif computer_choice == 'PAPER' and self.user_choice in ['ROCK', 'SPOCK']:
             result = 'I WON !!'
+            pc_points += 1
             match self.user_choice:
                 case 'ROCK':
                     phrase = 'PAPER COVERS ROCK !'
@@ -92,6 +100,7 @@ class Ui(QtWidgets.QMainWindow):
 
         elif computer_choice == 'LIZARD' and self.user_choice in ['PAPER', 'SPOCK']:
             result = 'I WON !!'
+            pc_points += 1
             match self.user_choice:
                 case 'PAPER':
                     phrase = 'LIZARD EATS PAPER !'
@@ -100,6 +109,7 @@ class Ui(QtWidgets.QMainWindow):
 
         elif computer_choice == 'SPOCK' and self.user_choice in ['ROCK', 'SCISSORS']:
             result = 'I WON !!'
+            pc_points += 1
             match self.user_choice:
                 case 'ROCK':
                     phrase = 'SPOCK VAPORIZES ROCK !'
@@ -112,6 +122,7 @@ class Ui(QtWidgets.QMainWindow):
 
         else:
             result = 'YOU WON !!!!!'
+            user_points += 1
 
 
         if self.user_choice == 'ROCK' and computer_choice in ['LIZARD', 'SCISSORS']:
@@ -161,6 +172,9 @@ class Ui(QtWidgets.QMainWindow):
         self.result_label.setText(result)
 
         self.phrase_label.setText(f'{phrase}')
+
+        self.score_user.setText(str(user_points))
+        self.score_pc.setText(str(pc_points))
     
         
 
